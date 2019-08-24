@@ -1,0 +1,28 @@
+{
+  "name": "trukafer",
+  "version": "1.0.0",
+  "description": "Liste de tâches par EdwardT",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "html2pug": "html2pug < html2pug.html > html2pug.pug -f"
+  },
+  "keywords": [
+    "to-do",
+    "list"
+  ],
+  "author": "EdwardT",
+  "license": "ISC",
+  "devDependencies": {
+    "html2pug": "^4.0.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.6.10",
+    "pug": "^2.0.4"
+  }
+}
