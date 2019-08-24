@@ -1,0 +1,31 @@
+extends layout
+block content
+	.row
+		.col-md-4
+			.card
+				.card-header
+					h3 Ajouter une tâche
+				.card-body
+					form(method="POST", action="/add")
+						.form-group
+							label(for='add') Ajouter une tâche
+							input.form-control#add(type='text', name="taskTitle", placeholder='Tâche à ajouter')
+						input.btn.btn-block.btn-primary(type='submit', value='➕ Ajouter')
+		.col-md-8
+			table.table.table-striped
+				thead
+					tr
+						th(scope='col') ID de tâche
+						th(scope='col') Nom de tâche
+						th(scope='col') Éditer la tâche
+						th(scope='col') Supprimer la tâche
+				tbody
+					each trukafer in trukafers
+						tr
+							td(scope='row')= trukafer.id
+							th= trukafer.title
+							td
+								a(href="/edit-"+trukafer.id).btn.btn-sm.btn-info 🖊
+							td
+								form(method="POST", action="/delete-"+trukafer.id+"?_method=DELETE")
+									button.btn.btn-sm.btn-danger(type="submit") 🗑

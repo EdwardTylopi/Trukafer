@@ -1,0 +1,13 @@
+extends layout
+block content
+	.row
+		.col-md-12
+			.card
+				.card-header
+					h3 Éditer une tâche
+				.card-body
+					form(method="POST", action="/edit-"+trukafer.id+"?_method=PUT")
+						.form-group
+							label(for='edit') Éditer la tâche "#{trukafer.title}"
+							input.form-control#edit(type='text', name="taskTitle", value=trukafer.title, placeholder='Tâche à éditer')
+						input.btn.btn-block.btn-primary(type='submit', value='🖊 Éditer')
