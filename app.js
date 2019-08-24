@@ -8,6 +8,7 @@ mongoose.connect('mongodb+srv://EdwardT:24e06t1998@trukafer-traoj.mongodb.net/te
 	.then(() => {
 		console.log('Connecté à la base de données')
 	})
+	.catch(error => console.error(error))
 
 const app = express()
 
